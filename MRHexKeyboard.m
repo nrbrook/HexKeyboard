@@ -147,17 +147,14 @@ static UIColor *sGrayColour = nil;
 
 - (void)updateConstraints {
     [super updateConstraints];
-    NSLayoutYAxisAnchor * topLayoutAnchor;
     NSLayoutYAxisAnchor * bottomLayoutAnchor;
     NSLayoutXAxisAnchor * leftLayoutAnchor;
     NSLayoutXAxisAnchor * rightLayoutAnchor;
     if (@available(iOS 11.0, *)) {
-        topLayoutAnchor = self.safeAreaLayoutGuide.topAnchor;
         bottomLayoutAnchor = self.safeAreaLayoutGuide.bottomAnchor;
         leftLayoutAnchor = self.safeAreaLayoutGuide.leftAnchor;
         rightLayoutAnchor = self.safeAreaLayoutGuide.rightAnchor;
     } else {
-        topLayoutAnchor = self.topAnchor;
         bottomLayoutAnchor = self.bottomAnchor;
         leftLayoutAnchor = self.leftAnchor;
         rightLayoutAnchor = self.rightAnchor;
